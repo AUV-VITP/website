@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team AUV | VIT Pune</title>
+    <meta
+      name="description"
+      content="Team AUV at VIT Pune designs and builds autonomous underwater vehicles: mechanical design, embedded systems, controls and perception."
+    />
+    <meta name="theme-color" content="#06204a" />
+    <meta property="og:title" content="Team AUV | VIT Pune" />
+    <meta
+      property="og:description"
+      content="Autonomous underwater vehicles, engineered end to end."
+    />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" href="assets/favicon-32.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="preload" href="assets/wordmark-light.webp" as="image" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      document.documentElement.className = "js";
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Fixed ocean: darkens as you scroll -->
+    <div class="sea" aria-hidden="true">
+      <div class="sea-deep"></div>
+      <div class="sea-glow"></div>
+      <div class="rays"></div>
+      <div class="snow" id="snow"></div>
+    </div>
+
+    <header class="top" id="top">
+      <a class="brand" href="#" aria-label="Team AUV, back to top">
+        <img
+          src="assets/wordmark-light.webp"
+          alt="AUV"
+          width="720"
+          height="151"
+          decoding="async"
+        />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-small btn-primary top-cta" href="mailto:auv@vit.edu"
+        >Get in touch</a
+      >
+    </header>
+
+    <aside class="gauge" id="gauge" aria-hidden="true">
+      <span class="gauge-label">Depth</span>
+      <div class="gauge-rail">
+        <div class="gauge-ticks"></div>
+        <div class="gauge-marker" id="gauge-marker">
+          <span id="gauge-value">0 m</span>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <img
+          class="hero-emblem"
+          id="hero-emblem"
+          src="assets/emblem-light.webp"
+          alt=""
+          width="400"
+          height="400"
+          decoding="async"
+        />
+        <div class="wrap hero-inner">
+          <p class="eyebrow hero-in" style="--i: 0">Team AUV &middot; VIT Pune</p>
+          <h1 class="hero-title hero-in" style="--i: 1">
+            Underwater vehicles,
+            <span class="grad">engineered end to end</span>
+          </h1>
+          <p class="lead hero-in" style="--i: 2">
+            A student team building autonomous underwater vehicles. Mechanical
+            design, embedded systems, controls and perception, taken from CAD
+            through simulation to the tank.
+          </p>
+          <div class="cta hero-in" style="--i: 3">
+            <a class="btn btn-primary" href="#work">
+              See our work
+              <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+                <path
+                  d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="mailto:auv@vit.edu">auv@vit.edu</a>
+          </div>
+        </div>
+
+        <div class="waves" aria-hidden="true">
+          <svg class="wave w1" viewBox="0 0 2880 140" preserveAspectRatio="none">
+            <path
+              d="M0 70C240 20 480 120 720 70S1200 20 1440 70 1920 120 2160 70 2640 20 2880 70V140H0Z"
+            />
+          </svg>
+          <svg class="wave w2" viewBox="0 0 2880 140" preserveAspectRatio="none">
+            <path
+              d="M0 80C240 120 480 30 720 80S1200 130 1440 80 1920 30 2160 80 2640 130 2880 80V140H0Z"
+            />
+          </svg>
+          <svg class="wave w3" viewBox="0 0 2880 140" preserveAspectRatio="none">
+            <path
+              d="M0 90C240 55 480 125 720 90S1200 55 1440 90 1920 125 2160 90 2640 55 2880 90V140H0Z"
+            />
+          </svg>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="wrap">
+          <p class="kicker reveal">What we do</p>
+          <h2 class="h2 reveal" id="about-title">
+            Design, build and validate autonomous vehicles
+          </h2>
+
+          <div class="cards">
+            <article class="card reveal" style="--d: 0">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26">
+                  <path
+                    d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Zm0 9 8.5-4.5M12 12 3.5 7.5M12 12v9"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <h3>Design and build</h3>
+              <p>
+                AUVs for RoboSub and related challenges, from hull form and
+                thruster layout to pressure housings and mass budget.
+              </p>
+            </article>
+            <article class="card reveal" style="--d: 1">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26">
+                  <path
+                    d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3.2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                </svg>
+              </span>
+              <h3>Sense and decide</h3>
+              <p>
+                Sensing, navigation and onboard autonomy running on embedded
+                flight hardware, with real sonar in the loop.
+              </p>
+            </article>
+            <article class="card reveal" style="--d: 2">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26">
+                  <path
+                    d="m4 12 5 5L20 6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <h3>Validate early</h3>
+              <p>
+                Hardware and software proven in simulation and on the bench
+                before anything goes into a tank.
+              </p>
+            </article>
+          </div>
+
+          <ul class="disciplines reveal" aria-label="Disciplines">
+            <li>Mechanical</li>
+            <li>Embedded systems</li>
+            <li>Controls</li>
+            <li>Perception</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <p class="kicker reveal">Selected work</p>
+          <h2 class="h2 reveal" id="work-title">isonavi</h2>
+          <p class="sub reveal">
+            Autonomous underwater reconnaissance for post-flood disaster
+            response. A vehicle designed for opaque, fast water where divers
+            cannot work and optical cameras see nothing.
+          </p>
+
+          <div class="stage reveal" id="stage">
+            <div class="stage-poster" id="viewer-fallback">
+              <img
+                src="assets/isonavi-fallback.png"
+                alt="isonavi vehicle render"
+                width="682"
+                height="322"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <canvas id="viewer" aria-label="Interactive 3D model of the isonavi vehicle" tabindex="0"></canvas>
+
+            <div class="loader" id="loader" role="status">
+              <div class="loader-ring" aria-hidden="true"></div>
+              <p class="loader-text" id="loader-text">Loading model</p>
+              <div class="loader-track" aria-hidden="true">
+                <span id="loader-fill"></span>
+              </div>
+            </div>
+
+            <p class="stage-hint" id="stage-hint">Drag to rotate</p>
+
+            <div class="stage-bar">
+              <div class="chips" id="chips" role="group" aria-label="Toggle parts">
+                <button class="chip" data-part="hull" aria-pressed="true">
+                  <i style="--c: #dc8c29"></i>Hull
+                </button>
+                <button class="chip" data-part="window" aria-pressed="true">
+                  <i style="--c: #2a5785"></i>Nose dome
+                </button>
+                <button class="chip" data-part="dark" aria-pressed="true">
+                  <i style="--c: #34363f"></i>Thrusters
+                </button>
+                <button class="chip" data-part="accent" aria-pressed="true">
+                  <i style="--c: #bd661a"></i>Fins &amp; pylons
+                </button>
+                <button class="chip" data-part="metal" aria-pressed="true">
+                  <i style="--c: #9ea3ad"></i>Hardware
+                </button>
+              </div>
+              <div class="tools">
+                <button class="tool" id="btn-rotate" aria-pressed="true">
+                  Auto rotate
+                </button>
+                <button class="tool" id="btn-reset">Reset view</button>
+              </div>
+            </div>
+          </div>
+
+          <dl class="stats">
+            <div class="stat reveal" style="--d: 0">
+              <dt>Station keeping envelope</dt>
+              <dd><b data-count="2.69" data-dec="2">0</b><small>m/s</small></dd>
+            </div>
+            <div class="stat reveal" style="--d: 1">
+              <dt>Depth rating</dt>
+              <dd><b data-count="50">0</b><small>m</small></dd>
+            </div>
+            <div class="stat reveal" style="--d: 2">
+              <dt>Thrusters</dt>
+              <dd><b data-count="8">0</b></dd>
+            </div>
+            <div class="stat reveal" style="--d: 3">
+              <dt>Acoustic detection, held out real sonar</dt>
+              <dd><b data-count="99.0" data-dec="1">0</b><small>%</small></dd>
+            </div>
+          </dl>
+
+          <div class="split">
+            <div class="reveal">
+              <h3 class="h3">Technology readiness</h3>
+              <p class="muted">
+                Per subsystem, on the 9 point scale. The autonomy stack flies on
+                real flight hardware. No physical vehicle exists yet and
+                nothing has been in water.
+              </p>
+            </div>
+            <ul class="trl">
+              <li class="reveal" style="--d: 0" data-trl="4">
+                <span class="trl-name">Autonomy: estimation, control, mission logic</span>
+                <span class="trl-bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="trl-val">TRL 4</span>
+              </li>
+              <li class="reveal" style="--d: 1" data-trl="4">
+                <span class="trl-name">Actuator interface</span>
+                <span class="trl-bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="trl-val">TRL 4</span>
+              </li>
+              <li class="reveal" style="--d: 2" data-trl="4">
+                <span class="trl-name">Acoustic perception</span>
+                <span class="trl-bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="trl-val">TRL 4</span>
+              </li>
+              <li class="reveal" style="--d: 3" data-trl="3">
+                <span class="trl-name">Geometric detection and mapping</span>
+                <span class="trl-bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="trl-val">TRL 3</span>
+              </li>
+              <li class="reveal" style="--d: 4" data-trl="3">
+                <span class="trl-name">Vehicle structure and hydrodynamics</span>
+                <span class="trl-bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="trl-val">TRL 3</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="links reveal">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/AUV-VITP/isonavi/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a class="btn btn-ghost" href="assets/isonavi-brief.pdf">Two page brief</a>
+            <a
+              class="btn btn-ghost"
+              href="https://raw.githubusercontent.com/AUV-VITP/isonavi/main/docs/isonavi_report.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Full report</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section-last" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact">
+          <p class="kicker reveal">Contact</p>
+          <h2 class="h2 reveal" id="contact-title">Sponsors, collaborators and future members</h2>
+          <div class="mail reveal">
+            <a class="mail-link" href="mailto:auv@vit.edu">auv@vit.edu</a>
+            <button class="copy" id="copy" type="button" data-email="auv@vit.edu">
+              <span>Copy</span>
+            </button>
+          </div>
+          <p class="muted reveal">VIT Pune</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <img src="assets/emblem-light.webp" alt="" width="32" height="32" decoding="async" loading="lazy" />
+        <span>Team AUV &middot; VIT Pune &middot; <span id="year"></span></span>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
