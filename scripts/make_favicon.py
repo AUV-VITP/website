@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 
 SRC = Path(__file__).resolve().parents[1] / "logo1.png"
-OUT_DIR = Path(__file__).resolve().parents[1] / "assets"
+OUT_DIR = Path(__file__).resolve().parents[1] / "public" / "assets"
 THRESH = 28
 
 

@@ -19,7 +19,7 @@ from trimesh.visual.material import PBRMaterial
 sys.path.insert(0, str(Path.home() / "dev/isonavi/cad"))
 import isonavi_cad as C  # noqa: E402
 
-OUT = Path("/mnt/d/COLLEGE/AUV/website/assets/isonavi-web.glb")
+OUT = Path("/mnt/d/COLLEGE/AUV/website/public/assets/isonavi-web.glb")
 TOL, ANG = 0.9, 0.55          # tessellation tolerance (mm) and angle (rad)
 CREASE = np.cos(np.radians(40.0))
 

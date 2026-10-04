@@ -7,22 +7,24 @@ Static site, no build step. Plain HTML, CSS and ES modules. three.js is loaded f
 Serve over HTTP (not `file://`):
 
 ```bash
-npx serve .
+npx serve public
 ```
 
 ## Deploy
 
-Import the repo on Vercel with the **Other** framework preset and leave build command and output directory empty. `vercel.json` sets caching headers.
+Cloudflare Workers static assets. `wrangler.jsonc` serves `public/` and `public/_headers` sets caching. Every push to `main` redeploys. Build command stays empty, deploy command is `npx wrangler deploy`.
 
 ## Layout
 
 ```
-index.html
-css/style.css
-js/main.js      page interactions
-js/viewer.js    three.js viewer (lazy loaded)
-assets/         logos, favicon, isonavi-web.glb, brief PDF
-scripts/        export_glb.py (CAD to coloured GLB), make_favicon.py
+public/              the deployed site
+  index.html
+  css/style.css
+  js/main.js         page interactions
+  js/viewer.js       three.js viewer (lazy loaded)
+  assets/            logos, favicon, isonavi-web.glb, brief PDF
+scripts/             export_glb.py (CAD to coloured GLB), make_favicon.py
+wrangler.jsonc
 ```
 
 ## Regenerate the 3D model
